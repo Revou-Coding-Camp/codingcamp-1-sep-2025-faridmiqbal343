@@ -1,0 +1,208 @@
+body {
+    background-color: #1a1a2e;
+    color: #F2F2F2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main container */
+.todo-container {
+    background-color:#323948;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Application Title */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form for new task input */
+.todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Task and Date Container */
+.todo-input, .todo-date {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #8795ea;
+    border-radius: 8px;
+    background-color: #0e1628;
+    color: #e0e0e0;
+    font-size: 16px;
+}
+
+/* + button */
+.add-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8795ea;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.filter-button, .delete-all-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Filter dropdown */
+.filter-select {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1c2739;
+    color: #8795ea;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Deleta all */
+.delete-all-button {
+    background-color: #D0021B;
+    color: white;
+}
+
+/* Task list table */
+.todo-list-container table {
+    width: 100%;
+    background: #0e1628;
+    border: none;
+    border-radius: 8px;
+    border-collapse: collapse;
+    text-align: left;
+    table-layout: fixed;
+}
+
+
+
+/* Style for the empty row */
+.empty-row td {
+    text-align: center;
+    color: #8b939c;
+    padding: 25px;
+}
+
+.todo-list-container th, 
+.todo-list-container td {
+    padding: 15px;
+    border-bottom: 1px solid #2c3e50;
+}
+
+/* Define column widths */
+.todo-list-container th:nth-child(1),
+.todo-list-container td:nth-child(1) {
+    width: 40%; /* Task column */
+}
+.todo-list-container th:nth-child(2),
+.todo-list-container td:nth-child(2) {
+    width: 20%; /* Due Date column */
+}
+.todo-list-container th:nth-child(3),
+.todo-list-container td:nth-child(3) {
+    width: 20%; /* Status column */
+}
+.todo-list-container th:nth-child(4),
+.todo-list-container td:nth-child(4) {
+    width: 20%; /* Actions column */
+}
+
+/* Style for the task text cell to handle long text */
+td.task-text {
+    word-wrap: break-word; /* Wrap long words */
+    word-break: break-all; /* Break long words if necessary */
+}
+
+.todo-list-container tr:last-child td {
+    border-bottom: none;
+}
+
+.todo-list-container th {
+    color: #8b939c;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    border-bottom: none;
+}
+
+/* Style for individual delete button */
+.delete-btn {
+    background: none;
+    border: 1px solid #D0021B;
+    color: #D0021B;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.delete-btn:hover {
+    background: #D0021B;
+    color: white;
+}
+
+/* Style for completed tasks */
+tr.completed .task-text {
+    text-decoration: line-through;
+    color: #8b939c;
+}
+
+tr.completed .status {
+    background-color: #27ae60;
+    color: white;
+}
+
+/* Base style for the status span */
+.status {
+    background-color: #f39c12;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Disclaimer text */
+.disclaimer {
+    font-size: 12px;
+    font-style: italic;
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+footer {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    margin-top: 25px;
+    color: #8b939c;
+    font-size: 14px;
+}

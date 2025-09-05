@@ -6,21 +6,57 @@
     <title>Todo List - Farid Muhammad Iqbal</title>
 
     <!-- CSS External -->
-     <link rel="stylesheet" href="css/style.css">   
+    <link rel="stylesheet" href="css/style.css">   
 </head>
 
 <body>
 
     <!-- Header Section -->
-     <header></header>
+    <header>
+    </header>
 
     <!-- Main Section -->
-        <main></main>
+    <main>
+            <div class="todo-container">
+                <h1>Todo List</h1>
+                <form class="todo-form">
+                    <input type="text" class="todo-input" placeholder="Add a todo...">
+                    <input type="date" class="todo-date">
+                    <button type="submit" class="add-button">+</button>
+                </form>
+
+                <div class="controls">
+                    <select class="filter-select">
+                        <option value="all">FILTER: ALL</option>
+                        <option value="in-progress">FILTER: IN PROGRESS</option>
+                        <option value="completed">FILTER: COMPLETED</option>
+                    </select>
+                    <button class="delete-all-button">DELETE ALL</button>
+                </div>
+
+                <div class="todo-list-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>TASK</th>
+                                <th>DUE DATE</th>
+                                <th>STATUS</th>
+                                <th>ACTIONS</th>
+                            </tr>
+                        </thead>
+                        <tbody class="todo-list-body">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
 
     <!-- Footer Section -->
-        <footer></footer>
+    <footer>
+        <p class="disclaimer">⚠️ Disclaimer: Tasks will be lost if the page is refreshed or closed.</p>
+        <p>&copy; 2025 Farid Muhammad Iqbal</p>
+    </footer>
 
-    <!-- Javascript External -->
     <script src="js/script.js"></script>
 </body>
 
